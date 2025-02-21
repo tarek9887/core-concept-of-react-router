@@ -3,14 +3,62 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './todo'
+import Actor from './Actor'
+import Singer from './Singer'
+
 
 function App() {
+
+
+  const singers = [
+    {id:1,  name: 'mahfuzur Rahman', age : 68},
+    {id:2,  name: 'shofiur Rahman', age : 58},
+    {id:3,  name: 'Runa Laila', age : 48},
+    {id:4,  name: 'Pritom Hasan', age : 28},
+    {id:5,  name: 'Nobel Man', age : 38},
+  ]
+
+  const actors = ['shakib khan', 'shoriful raj', 'jashim','Rubel','Salmah Shah']
 
   return (
     <>
       <h1>Vite + React</h1>
+      
 
-      <Todo task="Learn React Router" isdone={true}></Todo>
+
+
+
+
+
+
+
+
+
+
+
+      {
+        singers.map(singger => <Singer singer={singger}></Singer>)
+      }
+
+
+
+
+
+
+      <Actor name = {"Bappa raj"}></Actor>
+
+      {
+        actors.map(actor => <Actor name={actor}></Actor>)
+      }
+
+
+
+
+
+
+
+
+      {/* <Todo task="Learn React Router" isdone={true}></Todo>
       <Todo task="Practise Everyday" isdone={false}></Todo>
       <Todo task="Explore core concept" isdone={true}></Todo>
 
@@ -18,7 +66,7 @@ function App() {
       <Developer></Developer>
       <Result grade="9" cgpa="3.89"></Result>
       <Result grade="10" cgpa="3.97"></Result>
-      <Result grade="11" cgpa="3.99"></Result>
+      <Result grade="11" cgpa="3.99"></Result> */}
     </>
   )
 }
